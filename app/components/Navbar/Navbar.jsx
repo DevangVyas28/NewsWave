@@ -43,9 +43,6 @@ const Navbar = () => {
         <li className="p-2 cursor-pointer">
           <Link href="/about">About</Link>
         </li>
-        <li className="p-2 cursor-pointer">
-          <Link href="/profile">Profile</Link>
-        </li>
       </ul>
       {loading ? (
         <p>Authenticating...</p>

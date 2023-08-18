@@ -7,7 +7,7 @@ const NewsCards = ({ title, description, imgUrl }) => {
         <img className="h-full w-full object-fit" src={imgUrl} alt="news" />
       </div>
       <div className="w-1/2 p-4">
-        <h1 className="mb-4 text-lg font-bold ">{title}</h1>
+        <h1 className="mb-4 text-lg sm:line-clamp-2 font-bold ">{title}</h1>
         <p className="text-sm text-slate-700 line-clamp-3">{description}</p>
       </div>
     </div>
