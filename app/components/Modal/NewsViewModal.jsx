@@ -38,12 +38,12 @@ const NewsViewModal = ({ setModalOpen, currentOpenNews }) => {
         </div>
         <div className="m-4 w-full flex items-center justify-evenly">
           <div className="w-1/2 p-2">
-            <img src={currentOpenNews.urlToImage} alt="news" />
+            <img src={currentOpenNews.image_url} alt="news" />
           </div>
-          <div className="w-1/2 p-2 text-justify">
+          <div className="mr-4 w-1/2 p-2 text-justify">
             <p>{currentOpenNews.description}</p>
             <div className="mt-4 w-full flex justify-end italic">
-              <p>Source - {currentOpenNews.source.name}</p>
+              <p>Source - {currentOpenNews.source_id}</p>
             </div>
           </div>
         </div>
@@ -52,7 +52,7 @@ const NewsViewModal = ({ setModalOpen, currentOpenNews }) => {
           <div className="w-full mx-auto flex items-center justify-center">
             <a
               className="w-1/5 mr-8 flex items-center "
-              href={currentOpenNews.url}
+              href={currentOpenNews.link}
               target="_blank"
             >
               <button className="w-full h-14 rounded-md bg-yellow-400 text-black">

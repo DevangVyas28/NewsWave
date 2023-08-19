@@ -16,9 +16,10 @@ export default function Home() {
   useEffect(() => {
     async function fetchData() {
       const data = await fetchNews();
-      setData(data.articles);
+      setData(data.results);
     }
     fetchData();
+    console.log(data);
   }, []);
 
   const openModal = (openNews) => {
@@ -74,10 +75,10 @@ export default function Home() {
                     onClick={() => openModal(news)}
                   >
                     <NewsCards
-                      source={news.source.name}
+                      source={news.source_id}
                       title={news.title}
                       description={news.description}
-                      imgUrl={news.urlToImage}
+                      imgUrl={news.image_url}
                       gridView={gridView}
                     />
                   </div>
