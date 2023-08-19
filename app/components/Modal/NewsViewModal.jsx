@@ -34,7 +34,7 @@ const NewsViewModal = ({ setModalOpen, currentOpenNews }) => {
           </button>
         </div>
         <div className="mb-16 w-4/5 mx-auto text-center">
-          <h1 className="text-lg font-bold">{currentOpenNews.title}</h1>
+          <h1 className="text-2xl font-bold">{currentOpenNews.title}</h1>
         </div>
         <div className="m-4 w-full flex items-center justify-evenly">
           <div className="w-1/2 p-2">
@@ -49,17 +49,17 @@ const NewsViewModal = ({ setModalOpen, currentOpenNews }) => {
         </div>
 
         <div className="w-full flex items-center justify-center">
-          <div className="w-full mx-auto flex items-center justify-evenly">
+          <div className="w-full mx-auto flex items-center justify-center">
             <a
-              className="w-1/3 flex items-center "
+              className="w-1/5 mr-8 flex items-center "
               href={currentOpenNews.url}
               target="_blank"
             >
-              <button className="w-2/3 h-14 rounded-md bg-yellow-400 text-black">
+              <button className="w-full h-14 rounded-md bg-yellow-400 text-black">
                 Read more
               </button>
             </a>
-            <div className="h-8 w-8 bg-[#00B099] flex items-center justify-center rounded-lg">
+            <div className="h-8 w-8 cursor-pointer bg-[#00B099] flex items-center justify-center rounded-lg">
               <AiFillLike
                 size={28}
                 onClick={() =>

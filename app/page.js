@@ -42,7 +42,7 @@ export default function Home() {
         {data != null && user ? (
           <div>
             <div className=" w-full flex items-center justify-between">
-              <p className="m-6 text-4xl font-merriweather">News Headlines</p>
+              <p className="m-6 text-4xl font-sans">News Headlines</p>
               <div className="mr-4">
                 {/* <button
               className="w-44 h-8 bg-slate-400 rounded-lg"
@@ -53,7 +53,7 @@ export default function Home() {
                 {data != null ? (
                   <button
                     onClick={() => setGridView(!gridView)}
-                    className="w-24 h-8 bg-[#00B099] rounded-lg"
+                    className="w-24 h-8 bg-[#00B099] rounded-lg font-sans"
                   >
                     {gridView ? "list view" : "Grid view"}
                   </button>
@@ -61,7 +61,11 @@ export default function Home() {
               </div>
             </div>
             <div
-              className={gridView ? "grid grid-cols-3 " : "grid grid-cols-2 "}
+              className={
+                gridView
+                  ? "grid grid-cols-3 "
+                  : "grid grid-cols-1 lg:grid-cols-2"
+              }
             >
               {data.map((news) => {
                 return (
@@ -70,9 +74,11 @@ export default function Home() {
                     onClick={() => openModal(news)}
                   >
                     <NewsCards
+                      source={news.source.name}
                       title={news.title}
                       description={news.description}
                       imgUrl={news.urlToImage}
+                      gridView={gridView}
                     />
                   </div>
                 );
