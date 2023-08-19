@@ -34,19 +34,19 @@ const Navbar = () => {
   };
 
   return (
-    <div className="h-20 w-full border-b-2 flex  items-center justify-between p-2 text-white bg-[#20455A]">
+    <div className="h-20 w-full  flex  items-center justify-between px-12 text-white bg-[#20455A]">
       <ul className="flex items-center justify-evenly px-6">
         <li>
           <img className="h-14 w-14 text-black " src="/main.svg" alt="logo" />
         </li>
-        <li className="mr-6 cursor-pointer ">
+        <li className="mr-6 ml-3 cursor-pointer ">
           <Link href="/" className="font-bold text-4xl font-serif">
-            The News
+            NewsWave
           </Link>
         </li>
         <li className=" cursor-pointer pt-2">
           <Link href="/saved" className="font-sans">
-            Saved News
+            Favourites
           </Link>
         </li>
       </ul>

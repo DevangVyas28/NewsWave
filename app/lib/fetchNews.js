@@ -9,7 +9,10 @@ export default async function fetchNews() {
   var apiData = "";
   await fetch(req)
     .then((response) => response.json())
-    .then((data) => (apiData = data));
+    .then((data) => (apiData = data))
+    .catch((err) => {
+      alert("Api Error");
+    });
   console.log(apiData.results);
   return apiData;
 }

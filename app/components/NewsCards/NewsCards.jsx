@@ -4,7 +4,7 @@ const NewsCards = ({ source, title, description, imgUrl, gridView }) => {
   return (
     <div>
       {gridView ? (
-        <div className="h-[60vh] w-full bg-slate-300 text-black flex flex-col items-center rounded-lg border-2 transition ease-in-out delay-100 shadow-lg shadow-slate-500 hover:shadow-2xl hover:shadow-slate-800 text-justify">
+        <div className="h-[60vh] w-full px-4 py-2 bg-white text-black flex flex-col items-center rounded-xl border-2 transition ease-in-out delay-100 shadow-[1px_1px_8px_0px_rgba(58, 58, 58, 0.25)] hover:shadow-[10px_8px_1px_0px_#7A7A7A]  text-justify">
           <div className="my-4 h-1/2 w-full p-2 text-center font-serif">
             <img
               className="h-full w-full object-fit rounded-lg"
@@ -36,7 +36,7 @@ const NewsCards = ({ source, title, description, imgUrl, gridView }) => {
           <div className="flex"></div>
         </div>
       ) : (
-        <div className="h-[30vh] w-full bg-slate-300 text-black flex items-center rounded-lg border-2 transition ease-in-out delay-100 shadow-lg shadow-slate-500 hover:shadow-2xl hover:shadow-slate-800 text-justify">
+        <div className="h-[35vh] w-full p-4 bg-white text-black flex items-center rounded-xl border-2 transition ease-in-out delay-100 shadow-[1px_1px_8px_0px_rgba(58, 58, 58, 0.25)] hover:shadow-[10px_8px_1px_0px_#7A7A7A] ">
           <div className="h-full w-1/2 p-2">
             <img
               className="h-full w-full object-fit rounded-lg"
