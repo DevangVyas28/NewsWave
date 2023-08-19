@@ -2,13 +2,13 @@ import { db } from "../firebase";
 import {
   collection,
   addDoc,
+  getDocs,
   updateDoc,
   doc,
   deleteDoc,
 } from "firebase/firestore";
 
 const likedNews = async (userId, title, imgUrl, description, url) => {
-  alert(userId);
   try {
     await addDoc(collection(db, "liked-news"), {
       user: userId,
@@ -18,6 +18,7 @@ const likedNews = async (userId, title, imgUrl, description, url) => {
       url: url,
       createdAt: new Date().getTime(),
     });
+    alert("Added to Liked Articles");
   } catch (err) {
     alert(err);
   }

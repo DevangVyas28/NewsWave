@@ -13,7 +13,6 @@ export const AuthContextProvider = ({ children }) => {
   const [user, setUser] = useState(null);
 
   const googleSignIn = () => {
-    alert("bhai yaha tak pohocha");
     const provider = new GoogleAuthProvider();
     signInWithPopup(auth, provider);
   };
