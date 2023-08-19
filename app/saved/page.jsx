@@ -24,6 +24,9 @@ const page = () => {
   }, []);
   return (
     <div>
+      <div>
+        <p className="m-6 text-4xl font-sans">Favourites</p>
+      </div>
       {likedNews != null ? (
         <div className="grid grid-cols-2">
           {likedNews.map((news) => {
