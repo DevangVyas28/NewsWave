@@ -66,9 +66,9 @@ const NewsViewModal = ({ setModalOpen, currentOpenNews }) => {
                   addToDatabase(
                     user.uid,
                     currentOpenNews.title,
-                    currentOpenNews.urlToImage,
+                    currentOpenNews.image_url,
                     currentOpenNews.description,
-                    currentOpenNews.url
+                    currentOpenNews.link
                   )
                 }
               />
